@@ -1,14 +1,16 @@
-name = OFF feature
+name = OFF Feature
 core = 7.x
 package = Collabco
 php = 5.2.4
 dependencies[] = blog
 dependencies[] = collabco_settings_feature
 dependencies[] = ctools
+dependencies[] = fe_block
 dependencies[] = features
 dependencies[] = quicktabs
 dependencies[] = text
 features[ctools][] = quicktabs:quicktabs:1
+features[fe_block_settings][] = quicktabs-projects
 features[features_api][] = api:2
 features[field_instance][] = comment-comment_node_blog-comment_body
 features[field_instance][] = node-blog-body

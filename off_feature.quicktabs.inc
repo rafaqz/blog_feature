@@ -16,14 +16,14 @@ function off_feature_quicktabs_default_quicktabs() {
   $quicktabs->machine_name = 'projects';
   $quicktabs->ajax = 0;
   $quicktabs->hide_empty_tabs = FALSE;
-  $quicktabs->default_tab = 1;
+  $quicktabs->default_tab = 0;
   $quicktabs->title = 'Projects';
   $quicktabs->tabs = array(
     0 => array(
-      'nid' => '',
+      'nid' => '5',
       'teaser' => 0,
       'hide_title' => 1,
-      'title' => 'Free and Open',
+      'title' => 'OFF',
       'weight' => '-100',
       'type' => 'node',
     ),
@@ -31,7 +31,7 @@ function off_feature_quicktabs_default_quicktabs() {
       'nid' => '',
       'teaser' => 0,
       'hide_title' => 1,
-      'title' => 'OFN',
+      'title' => 'Free and Open',
       'weight' => '-99',
       'type' => 'node',
     ),
@@ -44,15 +44,17 @@ function off_feature_quicktabs_default_quicktabs() {
       'type' => 'node',
     ),
   );
-  $quicktabs->renderer = 'quicktabs';
+  $quicktabs->renderer = 'ui_tabs';
   $quicktabs->style = 'nostyle';
-  $quicktabs->options = array();
+  $quicktabs->options = array(
+    'history' => 0,
+  );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Closed but Useful');
   t('Free and Open');
-  t('OFN');
+  t('OFF');
   t('Projects');
 
   $export['projects'] = $quicktabs;
