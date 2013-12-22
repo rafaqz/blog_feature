@@ -28,12 +28,43 @@ function off_feature_field_default_field_instances() {
     'entity_type' => 'comment',
     'field_name' => 'comment_body',
     'label' => 'Comment',
-    'required' => TRUE,
+    'required' => 1,
     'settings' => array(
-      'text_processing' => 1,
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+          'wiki' => 'wiki',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+            'wiki' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 5,
