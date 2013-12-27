@@ -3,9 +3,14 @@ core = 7.x
 
 api = 2
 
-projects[hierarchical_select][version] = "3.0-alpha6"
-projects[hierarchical_select][subdir] = "contrib"
-
 projects[bugherd][version] = "1.0-beta3"
 projects[bugherd][subdir] = "contrib"
+
+projects[redirect][subdir] = "contrib"
+projects[redirect][version] = "1.0-rc1"
+
+projects[subpathauto][subdir] = "contrib"
+projects[subpathauto][version] = "1.3"
+
+
 
