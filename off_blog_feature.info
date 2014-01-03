@@ -1,4 +1,4 @@
-name = OFF Feature
+name = OFF Blog Feature
 core = 7.x
 package = Collabco
 dependencies[] = blog
