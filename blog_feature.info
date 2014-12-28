@@ -1,6 +1,6 @@
-name = OFF Blog Feature
+name = Blog Feature
 core = 7.x
-package = Collabco
+package = Features
 dependencies[] = blog
 dependencies[] = ctools
 dependencies[] = fe_block
