@@ -5,4 +5,4 @@
  * Code for the OFF feature feature.
  */
 
-include_once 'off_blog_feature.features.inc';
+include_once 'blog_feature.features.inc';
