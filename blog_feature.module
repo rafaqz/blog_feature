@@ -6,3 +6,25 @@
  */
 
 include_once 'blog_feature.features.inc';
+
+
+/**
+ * Implements hook_integration().
+ */
+function blog_feature_integration() {
+  // Add links to views if a module wants to do that.
+  return array(
+    'blog_feature' => array(
+      'entity' => array(
+        'node'=> array(
+          'blog' => array(
+            'add_content_link' => TRUE,
+            'image'=> array(
+              'enabled' => TRUE,
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
