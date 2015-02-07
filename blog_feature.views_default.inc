@@ -22,7 +22,7 @@ function blog_feature_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'News';
+  $handler->display->display_options['title'] = 'Blog';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -61,7 +61,7 @@ function blog_feature_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'news' => 'news',
+    'blog' => 'blog',
   );
 
   /* Display: Block */
@@ -80,7 +80,7 @@ function blog_feature_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = '<a href="news">News</a>';
+  $handler->display->display_options['title'] = '<a href="news">Blog</a>';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['access']['type'] = 'perm';
@@ -155,7 +155,7 @@ function blog_feature_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'news' => 'news',
+    'basic_page' => 'basic_page',
   );
 
   /* Display: Block */
@@ -170,7 +170,7 @@ function blog_feature_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['tags']['previous'] = '‹';
   $handler->display->display_options['pager']['options']['tags']['next'] = '›';
-  $handler->display->display_options['path'] = 'news';
+  $handler->display->display_options['path'] = 'blog';
 
   /* Display: Feed */
   $handler = $view->new_display('feed', 'Feed', 'feed_1');
