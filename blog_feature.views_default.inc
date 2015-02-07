@@ -69,18 +69,18 @@ function blog_feature_views_default_views() {
   $export['blog_list'] = $view;
 
   $view = new view();
-  $view->name = 'blog_news';
-  $view->description = 'Show latest news content.';
-  $view->tag = 'News Feature';
+  $view->name = 'blog';
+  $view->description = 'Show latest blog content.';
+  $view->tag = 'Blog Feature';
   $view->base_table = 'node';
-  $view->human_name = 'Blog News';
+  $view->human_name = 'Blog';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = '<a href="news">Blog</a>';
+  $handler->display->display_options['title'] = '<a href="blog">Blog</a>';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['access']['type'] = 'perm';
@@ -94,7 +94,7 @@ function blog_feature_views_default_views() {
       'changed' => 0,
     ),
     'node' => array(
-      'news' => 'news',
+      'blog' => 'blog',
       'basic_page' => 0,
       'closed_group' => 0,
       'conversation' => 0,
@@ -177,13 +177,13 @@ function blog_feature_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['style_plugin'] = 'rss';
   $handler->display->display_options['row_plugin'] = 'node_rss';
-  $handler->display->display_options['path'] = 'news/feed';
+  $handler->display->display_options['path'] = 'blog/feed';
   $handler->display->display_options['displays'] = array(
     'block' => 'block',
     'page' => 'page',
     'default' => 0,
   );
-  $export['blog_news'] = $view;
+  $export['blog'] = $view;
 
   return $export;
 }
