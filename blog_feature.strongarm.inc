@@ -62,6 +62,26 @@ function blog_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__blog';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'social_share' => array(
+          'teaser' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_node__blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_blog';
   $strongarm->value = array(
     0 => 'main-menu',
@@ -103,7 +123,7 @@ function blog_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_blog_pattern';
-  $strongarm->value = '[node:content-type]/[node:title]';
+  $strongarm->value = 'blog/[node:title]';
   $export['pathauto_node_blog_pattern'] = $strongarm;
 
   return $export;

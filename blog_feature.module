@@ -7,6 +7,12 @@
 
 include_once 'blog_feature.features.inc';
 
+/**
+ * Implements hook_init().
+ */
+function blog_feature_init() {
+  drupal_add_js(drupal_get_path('module', 'blog_feature') .'/blog_feature.js');
+}
 
 /**
  * Implements hook_integration().
